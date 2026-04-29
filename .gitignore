@@ -1,0 +1,14 @@
+# Python
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/.env
+
+# LlamaIndex / ChromaDB
+**/data/chroma_db/
+**/temp_uploads/
+
+# Node (para cuando agregues el front)
+**/node_modules/
+**/.next/
+**/dist/
