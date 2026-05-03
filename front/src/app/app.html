@@ -1,0 +1,11 @@
+<div class="layout">
+  <app-sidebar [historial]="historial" />
+
+  <div class="main">
+    <app-chat-window
+      (stateChange)="onStateChange($event)"
+      (newMessage)="onNewMessage($event)"
+    />
+    <app-clippy [state]="clippyState" />
+  </div>
+</div>

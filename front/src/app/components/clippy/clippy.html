@@ -1,0 +1,25 @@
+<div class="clippy-wrap" [ngClass]="'state-' + state">
+  <svg viewBox="0 0 150 190" xmlns="http://www.w3.org/2000/svg">
+    <g class="body-group">
+      <rect x="50" y="15" width="46" height="152" rx="23" fill="#B5D4F4" stroke="#185FA5" stroke-width="2"/>
+      <rect x="60" y="33" width="26" height="114" rx="13" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+      <path d="M50 150 Q50 178 73 178 Q96 178 96 150" fill="#B5D4F4" stroke="#185FA5" stroke-width="2"/>
+      <path d="M60 146 Q60 167 73 167 Q86 167 86 146" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+      <rect x="24" y="82" width="28" height="8" rx="4" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
+      <circle cx="22" cy="86" r="6" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
+      <g class="arm-r">
+        <rect x="96" y="82" width="28" height="8" rx="4" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
+        <circle cx="126" cy="86" r="6" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
+      </g>
+      <rect [attr.transform]="browLTransform" x="57" y="55" width="14" height="3" rx="1.5" fill="#042C53"/>
+      <rect [attr.transform]="browRTransform" x="77" y="55" width="14" height="3" rx="1.5" fill="#042C53"/>
+      <rect x="57" y="61" width="12" height="13" rx="3" fill="#042C53"/>
+      <rect x="79" y="61" width="12" height="13" rx="3" fill="#042C53"/>
+      <rect x="60" y="64" width="4" height="4" rx="1" fill="white"/>
+      <rect x="82" y="64" width="4" height="4" rx="1" fill="white"/>
+      <rect class="eyelid-l" x="57" y="61" width="12" height="13" rx="3" fill="#B5D4F4"/>
+      <rect class="eyelid-r" x="79" y="61" width="12" height="13" rx="3" fill="#B5D4F4"/>
+      <path [attr.d]="mouthPath" fill="none" stroke="#042C53" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </svg>
+</div>

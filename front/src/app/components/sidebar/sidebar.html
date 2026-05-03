@@ -1,0 +1,35 @@
+<div class="sidebar">
+  <div class="section">
+    <h3>Archivos</h3>
+    <div
+      class="dropzone"
+      (dragover)="onDragOver($event)"
+      (drop)="onDrop($event)"
+      (click)="fileInput.click()"
+    >
+      <span>{{ subiendo ? 'Subiendo...' : 'Arrastra o haz click' }}</span>
+      <small>PDF · DOCX · XLSX · TXT</small>
+    </div>
+    <input #fileInput type="file" hidden accept=".pdf,.docx,.xlsx,.txt" (change)="onFileSelect($event)" />
+    @if (error) {
+      <p class="error">{{ error }}</p>
+    }
+    <div class="files">
+      @for (archivo of archivos; track $index) {
+        <div class="file-chip">
+          <span class="dot"></span>
+          {{ archivo }}
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="section historial-section">
+    <h3>Historial</h3>
+    <div class="historial">
+      @for (msg of historial; track $index) {
+        <div class="hmsg" [ngClass]="msg.quien">{{ msg.texto }}</div>
+      }
+    </div>
+  </div>
+</div>

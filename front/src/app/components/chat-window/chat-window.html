@@ -1,0 +1,27 @@
+<div class="window">
+  <div class="window-bar">
+    <div class="win-dot red"></div>
+    <div class="win-dot yellow"></div>
+    <div class="win-dot green"></div>
+    <span>Asistente Clippy</span>
+  </div>
+
+  <div class="win-msgs" #msgContainer>
+    @for (msg of mensajes; track $index) {
+      <div class="wmsg" [ngClass]="msg.quien">{{ msg.texto }}</div>
+    }
+    @if (pensando) {
+      <div class="wmsg bot typing">Pensando...</div>
+    }
+  </div>
+
+  <div class="win-input">
+    <input
+      type="text"
+      [(ngModel)]="pregunta"
+      (keydown.enter)="enviar()"
+      placeholder="Escribe tu pregunta..."
+    />
+    <button (click)="enviar()" [disabled]="pensando">Enviar</button>
+  </div>
+</div>

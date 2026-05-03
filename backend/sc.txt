@@ -11,3 +11,4 @@ Instalar dependencias: pip install fastapi uvicorn llama-index llama-index-vecto
 // pip install python-docx
 
 Ejecutar: uvicorn main:app
+
